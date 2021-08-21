@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
 //앱 시작부분
 void main() {
@@ -31,12 +32,16 @@ class _MyHomePageState extends State<MyHomePage> {
 //화면에 UI를 그리는 메서드. 그려질 위젯을 반환
   var _index = 0; //페이지인덱스 0,1,2
   //3개의 페이지를 표현할 수 있도록 _index변수를 준비, 각페이지는 0,1,2의 값을 가진다
+  var _page = [
+    page1(),
+    page2(),
+    page3(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //build()메서드에 작성된 Container->Scaffold 위젯으로 수정
-
       appBar: AppBar(
         backgroundColor: Colors.white, //배경색을 흰색으로
         title: Text(
@@ -55,12 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
 
-      body: Center(
-        child: Text(
-          '$_index 페이지',
-          style: TextStyle(fontSize: 40),
-        ),
-      ),
+      body: _pages[_index],
 
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
@@ -89,3 +89,39 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   } //Wildget build
 } //class _MyHomePageState extends State<MyHomePage>
+
+class page1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        '홈 페이지', //이부분의 글자만 다르게 작성
+        style: TextStyle(fontSize: 40),
+      ),
+    );
+  } //Widget build(BuildContext context)
+} //class page1 extends StatelessWidget
+
+class page2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        '이용서비스', //이부분의 글자만 다르게 작성
+        style: TextStyle(fontSize: 40),
+      ),
+    );
+  } //Widget build(BuildContext context)
+} //class page1 extends StatelessWidget
+
+class page3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        '내 정보', //이부분의 글자만 다르게 작성
+        style: TextStyle(fontSize: 40),
+      ),
+    );
+  } //Widget build(BuildContext context)
+} //class page1 extends StatelessWidget
