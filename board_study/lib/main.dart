@@ -147,6 +147,11 @@ class page1 extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(
+          //  !!Sized   주의할 것
+          //20만큼의 여백생성
+          height: 20,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -177,20 +182,31 @@ class page1 extends StatelessWidget {
                 Text('바이크'),
               ],
             ),
-            Column(
-              children: <Widget>[
-                Icon(
-                  Icons.local_taxi,
-                  size: 40,
-                ),
-                Text('대리'),
-              ],
+            Opacity(
+              opacity: 0.0,
+              child: Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size: 40,
+                  ),
+                  Text('대리'),
+                ],
+              ),
             ),
           ],
         ),
       ],
     );
   }
+
+/* 
+1. v 메뉴만들기
+2. v 메뉴를 한줄에 4개 만들기
+3. v 메뉴를 두줄로 만들기 +  사이 여백 만들기
+4. v 메뉴 7개로 줄이기 -> 마지막을 Opacity로 감싸기
+5. 클릭 가능하게 만들고 전체 여백 주기
+*/
 
 //중단
   Widget _buildMiddle() {
@@ -202,13 +218,6 @@ class page1 extends StatelessWidget {
     return Text('Bottom');
   }
 }
-/* 
-1. v 메뉴만들기
-2. v 메뉴를 한줄에 4개 만들기
-3. V 메뉴를 두줄로 만들기
-4. 메뉴 7개로 줄이기
-5. 클릭 가능하게 만들고 전체 여백 주기
-*/
 
 class page2 extends StatelessWidget {
   @override
