@@ -104,43 +104,88 @@ class page1 extends StatelessWidget {
 
 //상단
   Widget _buildTop() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Column(
       children: <Widget>[
-        Column(
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Icon(
-              Icons.local_taxi,
-              size: 40,
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('택시'),
+              ],
             ),
-            Text('택시'),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('블랙'),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('바이크'),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('대리'),
+              ],
+            ),
           ],
         ),
-        Column(
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Icon(
-              Icons.local_taxi,
-              size: 40,
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('택시'),
+              ],
             ),
-            Text('블랙'),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            Icon(
-              Icons.local_taxi,
-              size: 40,
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('블랙'),
+              ],
             ),
-            Text('바이크'),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            Icon(
-              Icons.local_taxi,
-              size: 40,
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('바이크'),
+              ],
             ),
-            Text('대리'),
+            Column(
+              children: <Widget>[
+                Icon(
+                  Icons.local_taxi,
+                  size: 40,
+                ),
+                Text('대리'),
+              ],
+            ),
           ],
         ),
       ],
@@ -160,7 +205,7 @@ class page1 extends StatelessWidget {
 /* 
 1. v 메뉴만들기
 2. v 메뉴를 한줄에 4개 만들기
-3. 메뉴를 두줄로 만들기
+3. V 메뉴를 두줄로 만들기
 4. 메뉴 7개로 줄이기
 5. 클릭 가능하게 만들고 전체 여백 주기
 */
