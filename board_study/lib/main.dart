@@ -93,14 +93,37 @@ class _MyHomePageState extends State<MyHomePage> {
 class page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        '홈 페이지', //이부분의 글자만 다르게 작성
-        style: TextStyle(fontSize: 40),
-      ),
+    return Column(
+      children: <Widget>[
+        _buildTop(),
+        _buildMiddle(),
+        _buildBottom(),
+      ],
     );
-  } //Widget build(BuildContext context)
-} //class page1 extends StatelessWidget
+  }
+
+//상단
+  Widget _buildTop() {
+    return Text('Top');
+  }
+
+//중단
+  Widget _buildMiddle() {
+    return Text('Top');
+  }
+
+//하단
+  Widget _buildBottom() {
+    return Text('Top');
+  }
+}
+/* 
+1. 메뉴만들기
+2. 메뉴를 한줄에 4개 만들기
+3. 메뉴를 두줄로 만들기
+4. 메뉴 7개로 줄이기
+5. 클릭 가능하게 만들고 전체 여백 주기
+*/
 
 class page2 extends StatelessWidget {
   @override
